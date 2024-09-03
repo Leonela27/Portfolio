@@ -37,12 +37,12 @@ Below is a selection of my data analysis projects:
 2. **Project 2: [Project Title]**
    - **Description:** Brief overview of the project.
    - **Skills Used:** Data visualization, Python, Matplotlib, etc.
-   - **Link:** [Project Folder](./python-projects/project2)
+   - **Link:** [Project Folder](./projects/python-projects/project2)
 
 3. **Project 3: [Project Title]**
    - **Description:** Brief overview of the project.
    - **Skills Used:** Statistical analysis, Python, Scipy, etc.
-   - **Link:** [Project Folder](./python-projects/project3)
+   - **Link:** [Project Folder](./projects/python-projects/project3)
 
 
 ## PowerBI Projects 💹
@@ -50,12 +50,12 @@ Below is a selection of my data analysis projects:
 1. **Project 1: Financial Dashboard**
    - **Description:** A dashboard showcasing sales performance across different product categories, classes, and time periods, with interactive visuals such as grouped bar and column charts, line graphs, stacked columns, and key metrics cards.
    - **Skills Used:** Data Modeling, DAX, Data Visualization, Power Query, Calendar Table Creation, Custom Themes, Filtering, Tooltip.
-   - **Link:** [Financial Dashboard](./powerbi-projects/project1)  
+   - **Link:** [Financial Dashboard](./projects/powerbi-projects/project1)  
 
 2. **Project 2: HR Analytics Dashboard**
    - **Description:** A dashboard that analyzes employee metrics such as total hires, active headcount, turnover rate, and demographic distribution, broken down by job role, using various visualizations including area, funnel, and ring charts.
    - **Skills Used:** Data visualization, DAX, Power Query.
-   - **Link:** [HR Analytics Dashboard](./powerbi-projects/project2)  
+   - **Link:** [HR Analytics Dashboard](./projects/powerbi-projects/project2)  
 
 
 ## Setup ⚙️
