@@ -1,0 +1,42 @@
+name: Translate README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install deep-translator
+
+    - name: Translate README
+      run: |
+        from deep_translator import GoogleTranslator
+        
+        with open('README.md', 'r') as file:
+            text = file.read()
+        
+        translated = GoogleTranslator(source='auto', target='es').translate(text)
+        
+        with open('README_es.md', 'w') as file:
+            file.write(translated)
+    
+    - name: Commit translated README
+      run: |
+        git config --local user.email "github-actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add README_es.md
+        git commit -m "Auto-translated README to Spanish"
+        git push
