@@ -48,9 +48,9 @@ jobs:
         git status
         git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
 
-    - name: Pull changes from remote
+    - name: Pull changes from remote with rebase
       run: |
-        git pull origin main
+        git pull --rebase origin main
 
     - name: Push changes
       run: |
