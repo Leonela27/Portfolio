@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch: # Permite la ejecución manual
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,17 +22,18 @@ jobs:
       run: |
         pip install deep-translator
 
-    - name: Translate README
+    - name: Create translation script
       run: |
-        from deep_translator import GoogleTranslator
-        
-        with open('README.md', 'r') as file:
-            text = file.read()
-        
-        translated = GoogleTranslator(source='auto', target='es').translate(text)
-        
-        with open('README_es.md', 'w') as file:
-            file.write(translated)
+        echo "from deep_translator import GoogleTranslator" > translate_readme.py
+        echo "with open('README.md', 'r') as file:" >> translate_readme.py
+        echo "    text = file.read()" >> translate_readme.py
+        echo "translated = GoogleTranslator(source='auto', target='es').translate(text)" >> translate_readme.py
+        echo "with open('README_es.md', 'w') as file:" >> translate_readme.py
+        echo "    file.write(translated)" >> translate_readme.py
+
+    - name: Run translation script
+      run: |
+        python translate_readme.py
     
     - name: Commit translated README
       run: |
