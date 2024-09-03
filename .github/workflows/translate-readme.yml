@@ -33,17 +33,25 @@ jobs:
             file.write(translated)
         "
 
+    - name: List files
+      run: |
+        ls -la
+
     - name: Configure Git
       run: |
         git config --local user.email "github-actions@github.com"
         git config --local user.name "GitHub Actions"
 
+    - name: Add and commit files
+      run: |
+        git add README_es.md
+        git status
+        git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
+
     - name: Pull changes from remote
       run: |
         git pull origin main
 
-    - name: Commit translated README
+    - name: Push changes
       run: |
-        git add README_es.md
-        git commit -m 'Auto-translated README to Spanish'
         git push origin main
