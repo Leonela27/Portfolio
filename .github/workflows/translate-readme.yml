@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '**' # Asegúrate de que se ejecute en cualquier rama
+    paths:
+      - 'README.md' # Ejecutar solo cuando haya cambios en README.md
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -22,7 +24,26 @@ jobs:
       run: |
         pip install deep-translator
 
+    - name: Check if README.md has changed
+      id: check_readme
+      run: |
+        git fetch origin $BRANCH_NAME
+        if git diff --name-only HEAD origin/$BRANCH_NAME | grep 'README.md'; then
+          echo "README.md has changed."
+          echo "HAS_CHANGED=true" >> $GITHUB_ENV
+        else
+          echo "README.md has not changed."
+          echo "HAS_CHANGED=false" >> $GITHUB_ENV
+        fi
+
+    - name: Exit if README.md has not changed
+      if: env.HAS_CHANGED == 'false'
+      run: |
+        echo "No changes in README.md. Exiting workflow."
+        exit 0
+
     - name: Run translation script
+      if: env.HAS_CHANGED == 'true'
       run: |
         python -c "
         from deep_translator import GoogleTranslator
@@ -34,15 +55,18 @@ jobs:
         "
 
     - name: List files
+      if: env.HAS_CHANGED == 'true'
       run: |
         ls -la
 
     - name: Configure Git
+      if: env.HAS_CHANGED == 'true'
       run: |
         git config --local user.email "github-actions@github.com"
         git config --local user.name "GitHub Actions"
 
     - name: Add and commit files
+      if: env.HAS_CHANGED == 'true'
       run: |
         git add README_es.md
         git status
@@ -50,12 +74,15 @@ jobs:
 
     - name: Get current branch name
       id: get_branch
+      if: env.HAS_CHANGED == 'true'
       run: echo "BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
 
     - name: Pull changes from remote with merge allowing unrelated histories
+      if: env.HAS_CHANGED == 'true'
       run: |
         git pull origin $BRANCH_NAME --allow-unrelated-histories
 
     - name: Push changes
+      if: env.HAS_CHANGED == 'true'
       run: |
         git push origin $BRANCH_NAME
