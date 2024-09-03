@@ -3,7 +3,7 @@ name: Translate README
 on:
   push:
     branches:
-      - main
+      - '**' # Asegúrate de que se ejecute en cualquier rama
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -48,10 +48,14 @@ jobs:
         git status
         git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
 
-    - name: Pull changes from remote with merge
+    - name: Get current branch name
+      id: get_branch
+      run: echo "BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
+
+    - name: Pull changes from remote with merge allowing unrelated histories
       run: |
-        git pull --no-rebase origin main
+        git pull origin $BRANCH_NAME --allow-unrelated-histories
 
     - name: Push changes
       run: |
-        git push origin main
+        git push origin $BRANCH_NAME
