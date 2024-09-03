@@ -57,6 +57,10 @@ Below is a selection of my data analysis projects:
    - **Skills Used:** Data visualization, DAX, Power Query.
    - **Link:** [HR Analytics Dashboard](./projects/powerbi-projects/project2)  
 
+3. **Project 3: Sales Dashboard**
+   - **Description:** A dashboard that provides key insights into sales performance, including total sales, costs, profit, and sales trends by year and month. It also highlights sales by brand, best-selling products, and sales distribution across continents.
+   - **Skills Used:** Data visualization, DAX, Power Query.
+   - **Link:** [HR Analytics Dashboard](./projects/powerbi-projects/project3)  
 
 ## Setup ⚙️
 
