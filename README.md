@@ -1,8 +1,13 @@
-# Data Analysis Portfolio
+# Data Analysis Portfolio 📊
 
-Welcome to my Data Analysis Portfolio. This repository showcases a collection of data analysis projects that I have completed as part of my DataCamp bootcamp. Each project demonstrates different aspects of data analysis, from data cleaning and manipulation to statistical analysis and visualization.
+Welcome to my Data Analysis Portfolio! This repository showcases a collection of data analysis projects that I am currently completing as part of my ongoing [DataCamp](https://app.datacamp.com/) bootcamp. The portfolio features real-world projects in Python, which are designed around practical scenarios provided by the DataCamp platform. These projects highlight my skills in data cleaning, manipulation, statistical analysis, and visualization.
 
-## Table of Contents
+In addition to the DataCamp projects, the portfolio includes Power BI projects that I developed during an intensive program with [4Go Academy](https://4goacademy.com/). These projects focus on creating interactive dashboards and insightful reports, demonstrating my capabilities in business intelligence and data visualization.
+
+Explore the projects to see how I've applied my data analysis skills in different contexts and settings.
+
+
+## Table of Contents 📑
 
 - [About Me](#about-me)
 - [Python Projects](#python-projects)
@@ -10,11 +15,17 @@ Welcome to my Data Analysis Portfolio. This repository showcases a collection of
 - [Setup](#setup)
 - [Execution](#execution)
 
-## About Me
 
-I am a Computer Engineer with a strong background in software development, project management, and data analysis. Recently, I completed a Data Analysis bootcamp at DataCamp, where I honed my skills in Python, data management, and statistical analysis.
+## About Me 👩‍💻
 
-## Python Projects
+I am currently completing my degree in Computer Engineering, with all coursework finished and focusing on my capstone project in machine learning and data analysis. My professional experience spans various sectors, including electronic invoicing and the video industry, covering all stages of the software development lifecycle from analysis and design to maintenance and customer support.
+
+I have worked with .NET, Python, Node.js, and TypeScript. My strengths include strong analytical skills, meticulous documentation, and effective teamwork. My academic background also includes coursework in project management. 
+
+I am nearing the completion of a Data Analysis bootcamp at DataCamp, which has further developed my skills in Python, data management, and statistical analysis. I am currently seeking my first opportunity in a Business Analyst or Data Analyst role to apply and expand my expertise in these areas.
+
+
+## Python Projects 🐍
 
 Below is a selection of my data analysis projects:
 
@@ -34,21 +45,20 @@ Below is a selection of my data analysis projects:
    - **Link:** [Project Folder](./python-projects/project3)
 
 
-## PowerBI Projects
+## PowerBI Projects 💹
 
-1. **Project 1: [Project Title]**
-   - **Description:** Brief overview of the project.
+1. **Project 1: Financial Dashboard**
+   - **Description:** A dashboard showcasing sales performance across different product categories, classes, and time periods, with interactive visuals such as grouped bar and column charts, line graphs, stacked columns, and key metrics cards.
+   - **Skills Used:** Data Modeling, DAX, Data Visualization, Power Query, Calendar Table Creation, Custom Themes, Filtering, Tooltip.
+   - **Link:** [Financial Dashboard](./powerbi-projects/project1)  
+
+2. **Project 2: HR Analytics Dashboard**
+   - **Description:** A dashboard that analyzes employee metrics such as total hires, active headcount, turnover rate, and demographic distribution, broken down by job role, using various visualizations including area, funnel, and ring charts.
    - **Skills Used:** Data visualization, DAX, Power Query.
-   - **Link:** [Project Folder](./projects/powerbi-projects/project1)  
-
-2. **Project 2: [Project Title]**
-   - **Description:** Brief overview of the project.
-   - **Skills Used:** Data visualization, DAX, Power Query.
-   - **Link:** [Project Folder](./projects/powerbi-projects/project2)  
+   - **Link:** [HR Analytics Dashboard](./powerbi-projects/project2)  
 
 
-
-## Setup
+## Setup ⚙️
 
 ### Python Projects
 
@@ -78,7 +88,7 @@ To run the Python projects locally, follow these steps:
     ```
 
 
-## Execution
+## Execution 🚀
 
 ### Python Projects
 
