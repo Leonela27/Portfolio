@@ -3,7 +3,7 @@ name: Translate README
 on:
   push:
     branches:
-      - 'main' # Asegúrate de que se ejecute solo en la rama main
+      - 'main' # Se ejecuta solo en la rama main
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -24,50 +24,49 @@ jobs:
 
     - name: Run translation script
       run: |
-        python -c "
+        python - <<EOF
         from deep_translator import GoogleTranslator
         import os
 
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
-        
+
         # Function to split text into chunks of a specified max length
         def split_text(text, max_length):
-            # Ensure we split at word boundaries to avoid cutting words
-            words = text.split(' ')
-            chunks = []
-            current_chunk = ''
+            return [text[i:i + max_length] for i in range(0, len(text), max_length)]
 
-            for word in words:
-                # If adding the next word exceeds the max length, start a new chunk
-                if len(current_chunk) + len(word) + 1 > max_length:
-                    chunks.append(current_chunk)
-                    current_chunk = word  # Start a new chunk
+        try:
+            # Read the original README
+            with open('README.md', 'r', encoding='utf-8') as file:
+                text = file.read()
+            print(f"Original text length: {len(text)} characters")
+
+            # Split the text into chunks of max 5000 characters (Google Translator's limit)
+            text_chunks = split_text(text, 5000)
+            print(f"Number of chunks: {len(text_chunks)}")
+            for idx, chunk in enumerate(text_chunks):
+                print(f"Chunk {idx+1} length: {len(chunk)} characters")
+
+            # Translate each chunk and concatenate the translated parts
+            translator = GoogleTranslator(source='auto', target='es')
+            translated_chunks = []
+            for idx, chunk in enumerate(text_chunks):
+                if chunk.strip():  # Check if chunk is not empty
+                    translated_chunk = translator.translate(chunk)
+                    translated_chunks.append(translated_chunk)
                 else:
-                    current_chunk += ' ' + word if current_chunk else word
+                    print(f"Chunk {idx+1} is empty, skipping translation.")
+            translated_text = ''.join(translated_chunks)
 
-            # Add the last chunk
-            if current_chunk:
-                chunks.append(current_chunk)
+            # Write the new README with the additional line
+            with open('README_es.md', 'w', encoding='utf-8') as file:
+                file.write(additional_line + translated_text)
+            print("Translation completed successfully.")
 
-            return chunks
-
-        # Read the original README
-        with open('README.md', 'r') as file:
-            text = file.read()
-
-        # Split the text into chunks of max 5000 characters (Google Translator's limit)
-        text_chunks = split_text(text, 5000)
-
-        # Translate each chunk and concatenate the translated parts
-        translator = GoogleTranslator(source='auto', target='es')
-        translated_chunks = [translator.translate(chunk) for chunk in text_chunks]
-        translated_text = ''.join(translated_chunks)
-
-        # Write the new README with the additional line
-        with open('README_es.md', 'w') as file:
-            file.write(additional_line + translated_text)
-        "
+        except Exception as e:
+            print(f"An error occurred during translation: {e}")
+            raise
+        EOF
 
     - name: List files
       run: |
