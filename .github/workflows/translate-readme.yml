@@ -3,7 +3,7 @@ name: Translate README
 on:
   push:
     branches:
-      - 'main' # Asegúrate de que se ejecute solo en la rama main
+      - 'feature_translate_workflow' # Asegúrate de que se ejecute solo en la rama main
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -27,20 +27,52 @@ jobs:
         python -c "
         from deep_translator import GoogleTranslator
         import os
-        
+
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
-        
+
+        # Function to split text into chunks of a specified max length
+        def split_text(text, max_length):
+            chunks = []
+            current_chunk = ''
+
+            for word in text.split():
+                if len(current_chunk) + len(word) + 1 > max_length:
+                    chunks.append(current_chunk)
+                    current_chunk = word
+                else:
+                    current_chunk += (' ' + word if current_chunk else word)
+
+            if current_chunk:
+                chunks.append(current_chunk)
+
+            return chunks
+
         # Read the original README
         with open('README.md', 'r') as file:
             text = file.read()
-        
-        # Translate the text
-        translated = GoogleTranslator(source='auto', target='es').translate(text)
-        
+
+        # Split the text into chunks of max 5000 characters
+        text_chunks = split_text(text, 5000)
+
+        # Translate each chunk with error handling
+        translator = GoogleTranslator(source='auto', target='es')
+        translated_chunks = []
+
+        for chunk in text_chunks:
+            try:
+                if len(chunk) <= 5000:
+                    translated_chunks.append(translator.translate(chunk))
+            except Exception as e:
+                print(f'Error translating chunk: {e}')
+                translated_chunks.append(f'[Error: No se pudo traducir este fragmento] {chunk}')
+
+        # Concatenate the translated parts
+        translated_text = ''.join(translated_chunks)
+
         # Write the new README with the additional line
         with open('README_es.md', 'w') as file:
-            file.write(additional_line + translated)
+            file.write(additional_line + translated_text)
         "
 
     - name: List files
