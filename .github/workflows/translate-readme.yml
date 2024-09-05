@@ -3,8 +3,8 @@ name: Translate README
 on:
   push:
     branches:
-      - 'feature_translate_workflow'
-  workflow_dispatch:
+      - 'main' # Asegúrate de que se ejecute solo en la rama main
+  workflow_dispatch: # Permite la ejecución manual
 
 jobs:
   build:
@@ -25,9 +25,8 @@ jobs:
     - name: Run translation script
       run: |
         python -c "
-        from deep_translator import MicrosoftTranslator
+        from deep_translator import GoogleTranslator
         import os
-
 
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
@@ -37,7 +36,9 @@ jobs:
             with open(file_path, 'r') as file:
                 text = file.read()
 
-            translated = GoogleTranslator(source='auto', target='es').translate(text)
+            # Perform the translation
+            translator = GoogleTranslator(source='auto', target='es')
+            translated = translator.translate(text)
 
             with open(output_path, 'w') as file:
                 file.write(additional_line + translated)
