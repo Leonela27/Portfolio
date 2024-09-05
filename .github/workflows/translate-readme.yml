@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main' # Asegúrate de que se ejecute solo en la rama main
+      - 'main' # Asegúrate de que se ejecute solo en la rama main
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -27,6 +28,7 @@ jobs:
         python -c "
         from deep_translator import GoogleTranslator
         import os
+
 
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
