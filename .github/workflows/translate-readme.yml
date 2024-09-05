@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main' # Asegúrate de que se ejecute solo en la rama main
+      - 'main' # Asegúrate de que se ejecute solo en la rama main
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
@@ -28,57 +29,37 @@ jobs:
         from deep_translator import GoogleTranslator
         import os
 
+
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
-        
-        # Function to split text into chunks of a specified max length
-        def split_text(text, max_length):
-            chunks = []
-            current_chunk = ''
-            
-            # Split the text into words to ensure we don't cut words in half
-            for word in text.split():
-                if len(current_chunk) + len(word) + 1 > max_length:
-                    # If adding this word exceeds the limit, append the current chunk
-                    chunks.append(current_chunk)
-                    current_chunk = word  # Start a new chunk
-                else:
-                    # Add the word to the current chunk
-                    current_chunk += (' ' + word if current_chunk else word)
 
-            # Append the last chunk if it's not empty
-            if current_chunk:
-                chunks.append(current_chunk)
+        # Define a function to translate and save a README
+        def translate_readme(file_path, output_path):
+            with open(file_path, 'r') as file:
+                text = file.read()
 
-            return chunks
+            # Perform the translation
+            translator = GoogleTranslator(source='auto', target='es')
+            translated = translator.translate(text)
 
-        # Read the original README
-        with open('README.md', 'r') as file:
-            text = file.read()
+            with open(output_path, 'w') as file:
+                file.write(additional_line + translated)
 
-        # Split the text into chunks of max 5000 characters (Google Translator's limit)
-        text_chunks = split_text(text, 5000)
+        # Translate the main README
+        translate_readme('README.md', 'README_es.md')
 
-        # Translate each chunk and concatenate the translated parts
-        translator = GoogleTranslator(source='auto', target='es')
-        translated_chunks = []
+        # Translate the Python project README
+        translate_readme('projects/python-projects/README.md', 'projects/python-projects/README_es.md')
 
-        for chunk in text_chunks:
-            if len(chunk) <= 5000:
-                translated_chunks.append(translator.translate(chunk))
-            else:
-                print('Chunk too long:', len(chunk))
-
-        translated_text = ''.join(translated_chunks)
-
-        # Write the new README with the additional line at the top
-        with open('README_es.md', 'w') as file:
-            file.write(additional_line + translated_text)
+        # Translate the PowerBI project README
+        translate_readme('projects/powerbi-projects/README.md', 'projects/powerbi-projects/README_es.md')
         "
 
     - name: List files
       run: |
         ls -la
+        ls -la projects/python-projects/
+        ls -la projects/powerbi-projects/
 
     - name: Configure Git
       run: |
@@ -87,9 +68,9 @@ jobs:
 
     - name: Add and commit files
       run: |
-        git add README_es.md
+        git add README_es.md projects/python-projects/README_es.md projects/powerbi-projects/README_es.md
         git status
-        git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
+        git commit -m 'Auto-translated READMEs to Spanish' || echo "No changes to commit"
 
     - name: Get current branch name
       id: get_branch
