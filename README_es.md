@@ -1,0 +1,3 @@
+Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.
+
+Error 400 (Bad Request)!!1400.That’s an error.The server cannot process the request because it is malformed. It should not be retried.That’s all we know.🚀 ### Proyectos de Python 1. Vaya al directorio del proyecto y ejecute el cuaderno Jupyter: ```bash cd projects/python-projects/project1 jupyter notebook ``` ### Proyectos de PowerBI Para explorar e interactuar con los proyectos de Power BI: 1. Abra el archivo .pbix en Power BI Desktop. 2. Explore el informe e interactúe con las visualizaciones. Puede segmentar y filtrar los datos directamente en Power BI Desktop para obtener información.
