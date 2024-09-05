@@ -27,25 +27,35 @@ jobs:
         python -c "
         from deep_translator import GoogleTranslator
         import os
-        
+
         # Define the line to be added
         additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
-        
-        # Read the original README
-        with open('README.md', 'r') as file:
-            text = file.read()
-        
-        # Translate the text
-        translated = GoogleTranslator(source='auto', target='es').translate(text)
-        
-        # Write the new README with the additional line
-        with open('README_es.md', 'w') as file:
-            file.write(additional_line + translated)
+
+        # Define a function to translate and save a README
+        def translate_readme(file_path, output_path):
+            with open(file_path, 'r') as file:
+                text = file.read()
+
+            translated = GoogleTranslator(source='auto', target='es').translate(text)
+
+            with open(output_path, 'w') as file:
+                file.write(additional_line + translated)
+
+        # Translate the main README
+        translate_readme('README.md', 'README_es.md')
+
+        # Translate the Python project README
+        translate_readme('projects/python-projects/README.md', 'projects/python-projects/README_es.md')
+
+        # Translate the PowerBI project README
+        translate_readme('projects/powerbi-projects/README.md', 'projects/powerbi-projects/README_es.md')
         "
 
     - name: List files
       run: |
         ls -la
+        ls -la projects/python-projects/
+        ls -la projects/powerbi-projects/
 
     - name: Configure Git
       run: |
@@ -54,9 +64,9 @@ jobs:
 
     - name: Add and commit files
       run: |
-        git add README_es.md
+        git add README_es.md projects/python-projects/README_es.md projects/powerbi-projects/README_es.md
         git status
-        git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
+        git commit -m 'Auto-translated READMEs to Spanish' || echo "No changes to commit"
 
     - name: Get current branch name
       id: get_branch

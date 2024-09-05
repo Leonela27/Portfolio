@@ -24,46 +24,6 @@ I have worked with .NET, Python, Node.js, and TypeScript. My strengths include s
 
 I am nearing the completion of a Data Analysis bootcamp at DataCamp, which has further developed my skills in Python, data management, and statistical analysis. I am currently seeking my first opportunity in a Business Analyst or Data Analyst role to apply and expand my expertise in these areas.
 
-
-## Python Projects 🐍
-
-Below is a selection of my data analysis projects:
-
-
-Skills Used: 
-1. **Project 1: Netflix Movies Analysis**
-   - **Description:** This project involves an exploratory data analysis (EDA) of a Netflix dataset, focusing on movies released in the 1990s. The analysis includes identifying trends in movie durations, determining the frequency of short action movies, and visualizing the distribution of different show types. The project aims to derive insights into the characteristics of 1990s movies on Netflix..
-   - **Skills Used:** Data cleaning, Python, Pandas, Data Visualization (Matplotlib, Seaborn), Exploratory Data Analysis (EDA),Descriptive Statistics (mean, median, max, min).
-   - **Link:** [Project Folder](./projects//python-projects/project1)
-
-2. **Project 2: [Project Title]**
-   - **Description:** Brief overview of the project.
-   - **Skills Used:** Data visualization, Python, Matplotlib, etc.
-   - **Link:** [Project Folder](./projects/python-projects/project2)
-
-3. **Project 3: [Project Title]**
-   - **Description:** Brief overview of the project.
-   - **Skills Used:** Statistical analysis, Python, Scipy, etc.
-   - **Link:** [Project Folder](./projects/python-projects/project3)
-
-
-## PowerBI Projects 💹
-
-1. **Project 1: Financial Dashboard**
-   - **Description:** A dashboard showcasing sales performance across different product categories, classes, and time periods, with interactive visuals such as grouped bar and column charts, line graphs, stacked columns, and key metrics cards.
-   - **Skills Used:** Data Modeling, DAX, Data Visualization, Power Query, Calendar Table Creation, Custom Themes, Filtering, Tooltip.
-   - **Link:** [Financial Dashboard](./projects/powerbi-projects/project1)  
-
-2. **Project 2: HR Analytics Dashboard**
-   - **Description:** A dashboard that analyzes employee metrics such as total hires, active headcount, turnover rate, and demographic distribution, broken down by job role, using various visualizations including area, funnel, and ring charts.
-   - **Skills Used:** Data visualization, DAX, Power Query.
-   - **Link:** [HR Analytics Dashboard](./projects/powerbi-projects/project2)  
-
-3. **Project 3: Sales Dashboard**
-   - **Description:** A dashboard that provides key insights into sales performance, including total sales, costs, profit, and sales trends by year and month. It also highlights sales by brand, best-selling products, and sales distribution across continents.
-   - **Skills Used:** Data visualization, DAX, Power Query.
-   - **Link:** [HR Analytics Dashboard](./projects/powerbi-projects/project3)  
-
 ## Setup ⚙️
 
 ### Python Projects
