@@ -10,19 +10,27 @@ Explora los proyectos para ver cómo he aplicado mis habilidades de análisis de
 
 ## Índice 📑
 
-- [Acerca de mí](#about-me)
-- [Proyectos de Python](#python-projects)
-- [Proyectos de PowerBI](#powerbi-projects)
+- [Sobre mí](#sobre-mí)
+- [Proyectos](#proyectos)
 - [Configuración](#configuración)
 - [Ejecución](#ejecución)
 
-## Acerca de mí 👩‍💻
+## Sobre mí 👩‍💻
 
-Actualmente estoy terminando mi carrera en Ingeniería Informática, con todos los cursos terminados y centrándome en mi proyecto final en aprendizaje automático y análisis de datos. Mi experiencia profesional abarca varios sectores, incluida la facturación electrónica y la industria del video, cubriendo todas las etapas del ciclo de vida del desarrollo de software, desde el análisis y el diseño hasta el mantenimiento y la atención al cliente.
+Actualmente estoy terminando mi carrera en Ingeniería Informática, con todos los cursos terminados y enfocado en mi proyecto final en aprendizaje automático y análisis de datos. Mi experiencia profesional abarca varios sectores, incluida la facturación electrónica y la industria del video, cubriendo todas las etapas del ciclo de vida del desarrollo de software desde el análisis y el diseño hasta el mantenimiento y la atención al cliente.
 
-He trabajado con .NET, Python, Node.js y TypeScript. Mis puntos fuertes incluyen fuertes habilidades analíticas, documentación meticulosa y trabajo en equipo eficaz. Mi formación académica también incluye cursos en gestión de proyectos. 
+He trabajado con .NET, Python, Node.js y TypeScript. Mi experiencia incluye un amplio trabajo en equipos utilizando metodologías ágiles, con un fuerte perfil analítico enfocado en la documentación detallada y la mejora continua. Mi formación académica también incluye cursos en gestión de proyectos. 
 
-Estoy a punto de finalizar un bootcamp de análisis de datos en DataCamp, que ha desarrollado aún más mis habilidades en Python, gestión de datos y análisis estadístico. Actualmente estoy buscando mi primera oportunidad en un puesto de analista de negocios o analista de datos para aplicar y ampliar mi experiencia en estas áreas.
+Estoy a punto de completar un bootcamp de Análisis de Datos en DataCamp, que ha desarrollado aún más mis habilidades en Python, gestión de datos y análisis estadístico. Actualmente estoy buscando mi primera oportunidad en un puesto de analista de negocios o analista de datos para aplicar y ampliar mi experiencia en estas áreas.
+
+## Proyectos 📂
+
+Este portafolio incluye varios proyectos de análisis de datos que demuestran mis habilidades y conocimientos tanto en Python como en Power BI.
+Este portafolio presenta proyectos de análisis de datos en los que estoy trabajando actualmente y que agrego a medida que avanzo en mi bootcamp en curso. Muestra mis habilidades y conocimientos en evolución tanto en Python como en Power BI.
+
+- **Proyectos de Python**: estos proyectos se encuentran en el directorio [`python-projects`](./projects/python-projects/). Cada proyecto incluye una descripción detallada del problema abordado, las metodologías utilizadas y los resultados obtenidos. Para obtener más información, consulte el archivo [README](./projects/python-projects/README.md) correspondiente.
+
+- **Proyectos de Power BI**: estos proyectos se encuentran en el directorio [`powerbi-projects`](./projects/powerbi-projects/). Incluyen paneles interactivos e informes creados para proporcionar información valiosa. Para obtener más información, consulte el archivo [README](./projects/powerbi-projects/README.md) correspondiente.
 
 ## Configuración ⚙️
 
