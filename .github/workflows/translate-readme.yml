@@ -3,7 +3,7 @@ name: Translate README
 on:
   push:
     branches:
-      - 'main'
+      - 'feature_translate_workflow'
   workflow_dispatch:
 
 jobs:
