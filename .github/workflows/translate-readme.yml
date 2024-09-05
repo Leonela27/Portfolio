@@ -3,101 +3,12 @@ name: Translate README
 on:
   push:
     branches:
-      - 'feature_translate_workflow' # Asegúrate de que se ejecute solo en la rama main
-  workflow_dispatch: # Permite la ejecución manual
+      - 'feature_translate_workflow'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        pip install deep-translator
-
-    - name: Run translation script
-      run: |
-        python -c "
-        from deep_translator import GoogleTranslator
-        import os
-
-        # Define the line to be added
-        additional_line = 'Esta es la versión en español del README generada automáticamente. Puede contener errores de traducción. Se recomienda leer la versión original en inglés.\n\n'
-
-        # Function to split text into chunks of a specified max length
-        def split_text(text, max_length):
-            chunks = []
-            current_chunk = ''
-
-            for word in text.split():
-                if len(current_chunk) + len(word) + 1 > max_length:
-                    chunks.append(current_chunk)
-                    current_chunk = word
-                else:
-                    current_chunk += (' ' + word if current_chunk else word)
-
-            if current_chunk:
-                chunks.append(current_chunk)
-
-            return chunks
-
-        # Read the original README
-        with open('README.md', 'r') as file:
-            text = file.read()
-
-        # Split the text into chunks of max 5000 characters
-        text_chunks = split_text(text, 5000)
-
-        # Translate each chunk with error handling
-        translator = GoogleTranslator(source='auto', target='es')
-        translated_chunks = []
-
-        for chunk in text_chunks:
-            try:
-                if len(chunk) <= 5000:
-                    translated_chunks.append(translator.translate(chunk))
-            except Exception as e:
-                print(f'Error translating chunk: {e}')
-                translated_chunks.append(f'[Error: No se pudo traducir este fragmento] {chunk}')
-
-        # Concatenate the translated parts
-        translated_text = ''.join(translated_chunks)
-
-        # Write the new README with the additional line
-        with open('README_es.md', 'w') as file:
-            file.write(additional_line + translated_text)
-        "
-
-    - name: List files
-      run: |
-        ls -la
-
-    - name: Configure Git
-      run: |
-        git config --local user.email "github-actions@github.com"
-        git config --local user.name "GitHub Actions"
-
-    - name: Add and commit files
-      run: |
-        git add README_es.md
-        git status
-        git commit -m 'Auto-translated README to Spanish' || echo "No changes to commit"
-
-    - name: Get current branch name
-      id: get_branch
-      run: echo "BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
-
-    - name: Pull changes from remote with merge allowing unrelated histories
-      run: |
-        git pull origin $BRANCH_NAME --allow-unrelated-histories
-
-    - name: Push changes
-      run: |
-        git push origin $BRANCH_NAME
+    - uses: actions/checkout
