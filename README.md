@@ -9,9 +9,9 @@ Explore the projects to see how I've applied my data analysis skills in differen
 
 ## Table of Contents 📑
 
-- [About Me](#about-me)
-- [Requirements](#requirements)
-- [Projects](#projects)
+- [About Me](#about-me-)
+- [Requirements](#requirements-)
+- [Projects](#projects-)
 
 
 ## About Me 👩‍💻
@@ -22,7 +22,7 @@ I have worked with .NET, Python, Node.js, and TypeScript. My background includes
 
 I am nearing the completion of a Data Analysis bootcamp at DataCamp, which has further developed my skills in Python, data management, and statistical analysis. I am currently seeking my first opportunity in a Business Analyst or Data Analyst role to apply and expand my expertise in these areas.
 
-For a complete overview of my experience, feel free to visit my LinkedIn profile: [leonela-pereira](https://www.linkedin.com/in/leonela-pereira/)
+For a complete overview of my experience, feel free to visit my LinkedIn profile: [leonela-pereira](https://www.linkedin.com/in/leonela-pereira/).
 
 
 ## Requirements ⚙️
