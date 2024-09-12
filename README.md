@@ -28,8 +28,8 @@ For a complete overview of my experience, feel free to visit my LinkedIn profile
 ## Requirements ⚙️
 
 This portfolio includes projects that require Python and pip to be installed. Below are the recommended versions:
-- ![Python Version](https://img.shields.io/badge/python-3.12.3-darkgreen)
-- ![Pip Version](https://img.shields.io/badge/pip-24.2-darkgreen)
+- [![Python Version](https://img.shields.io/badge/python-3.12.3-darkgreen)](https://docs.python.org/3/)
+- [![Pip Version](https://img.shields.io/badge/pip-24.2-darkgreen)](https://pip.pypa.io/en/stable/)
 
 Please ensure you have the correct versions installed to run the projects smoothly. For setup and execution instructions, refer to the respective project README files.
 
