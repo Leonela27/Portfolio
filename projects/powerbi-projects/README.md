@@ -1,5 +1,18 @@
+## Table of Contents 📑
 
-## PowerBI Projects 💹
+- [Execution](#execution)
+- [Project Descriptions](#project-descriptions)
+
+
+## Execution 🚀
+
+To explore and interact with the Power BI projects:
+
+1. Open the .pbix file in Power BI Desktop.
+
+2. Explore the report and interact with the visualizations. You can slice and filter the data directly within Power BI Desktop to gain insights.
+
+## Project Descriptions 💹
 
 1. **Project 1: Financial Dashboard**
    - **Description:** A dashboard showcasing sales performance across different product categories, classes, and time periods, with interactive visuals such as grouped bar and column charts, line graphs, stacked columns, and key metrics cards.

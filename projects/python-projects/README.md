@@ -1,4 +1,44 @@
-## Python Projects 🐍
+## Table of Contents 📑
+
+- [Setup](#setup)
+- [Execution](#execution)
+- [Project Descriptions](#project-descriptions)
+
+## Setup ⚙️
+
+To run the Python projects locally, follow these steps:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Leonela27/data-analysis-portfolio.git
+   cd data-analysis-portfolio
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```bash
+    python3 -m venv venv
+
+    # Linux/macOS
+    source venv/bin/activate
+    
+    # Windows
+    venv\Scripts\activate
+    ```
+
+3. Install required dependencies:
+   ```bash
+    pip install -r requirements.txt
+    ```
+
+## Execution 🚀
+
+1. Navigate to the project directory and run the Jupyter notebook:
+    ```bash
+    cd projects/python-projects/project1
+    jupyter notebook
+    ```
+## Project Descriptions 🐍
 
 Below is a selection of my data analysis projects:
 
