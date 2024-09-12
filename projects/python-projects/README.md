@@ -1,6 +1,6 @@
 ## Table of Contents 📑
 
-- [Setup](#setup-)
+- [Setup](#setup-️)
 - [Execution](#execution-)
 - [Project Descriptions](#project-descriptions-)
 
