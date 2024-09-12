@@ -15,5 +15,5 @@ Below is a selection of my data analysis projects:
 
 3. **Project 3: [🚧 Under Construction]**
    - **Description:** Brief overview of the project.
-   - **Skills Used:** Statistical analysis, Python, Scipy, etc.
+   - **Skills Used:** complete.
    - **Link:** [Project Folder](./project3)
