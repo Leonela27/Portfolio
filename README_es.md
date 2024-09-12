@@ -10,18 +10,27 @@ Explora los proyectos para ver cómo he aplicado mis habilidades de análisis de
 
 ## Índice 📑
 
-- [Sobre mí](#sobre-mí)
-- [Proyectos](#proyectos)
-- [Configuración](#configuración)
-- [Ejecución](#ejecución)
+- [Sobre mí](#sobre-mí-)
+- [Requisitos](#requisitos-️)
+- [Proyectos](#proyectos-)
 
 ## Sobre mí 👩‍💻
 
 Actualmente estoy terminando mi carrera en Ingeniería Informática, con todos los cursos terminados y enfocado en mi proyecto final en aprendizaje automático y análisis de datos. Mi experiencia profesional abarca varios sectores, incluida la facturación electrónica y la industria del video, cubriendo todas las etapas del ciclo de vida del desarrollo de software desde el análisis y el diseño hasta el mantenimiento y la atención al cliente.
 
-He trabajado con .NET, Python, Node.js y TypeScript. Mi experiencia incluye un amplio trabajo en equipos utilizando metodologías ágiles, con un fuerte perfil analítico enfocado en la documentación detallada y la mejora continua. Mi formación académica también incluye cursos en gestión de proyectos. 
+He trabajado con .NET, Python, Node.js y TypeScript. Mi experiencia incluye un amplio trabajo en equipos utilizando metodologías ágiles, con un fuerte perfil analítico enfocado en la documentación detallada y la mejora continua. Mi formación académica también incluye cursos en gestión de proyectos.
 
 Estoy a punto de completar un bootcamp de Análisis de Datos en DataCamp, que ha desarrollado aún más mis habilidades en Python, gestión de datos y análisis estadístico. Actualmente estoy buscando mi primera oportunidad en un puesto de analista de negocios o analista de datos para aplicar y ampliar mi experiencia en estas áreas.
+
+Para obtener una descripción completa de mi experiencia, no dude en visitar mi perfil de LinkedIn: [leonela-pereira](https://www.linkedin.com/in/leonela-pereira/).
+
+## Requisitos ⚙️
+
+Este portafolio incluye proyectos que requieren la instalación de Python y pip. A continuación, se muestran las versiones recomendadas:
+- [![Versión de Python](https://img.shields.io/badge/python-3.12.3-darkgreen)](https://docs.python.org/3/)
+- [![Versión de Pip](https://img.shields.io/badge/pip-24.2-darkgreen)](https://pip.pypa.io/en/stable/)
+
+Asegúrese de tener instaladas las versiones correctas para ejecutar los proyectos sin problemas. Para obtener instrucciones de configuración y ejecución, consulte los archivos README del proyecto correspondiente.
 
 ## Proyectos 📂
 
@@ -30,51 +39,4 @@ Este portafolio presenta proyectos de análisis de datos en los que estoy trabaj
 
 - **Proyectos de Python**: estos proyectos se encuentran en el directorio [`python-projects`](./projects/python-projects/). Cada proyecto incluye una descripción detallada del problema abordado, las metodologías utilizadas y los resultados obtenidos. Para obtener más información, consulte el archivo [README](./projects/python-projects/README.md) correspondiente.
 
-- **Proyectos de Power BI**: estos proyectos se encuentran en el directorio [`powerbi-projects`](./projects/powerbi-projects/). Incluyen paneles interactivos e informes creados para proporcionar información valiosa. Para obtener más información, consulte el archivo [README](./projects/powerbi-projects/README.md) correspondiente.
-
-## Configuración ⚙️
-
-### Proyectos de Python
-
-Para ejecutar los proyectos de Python localmente, siga estos pasos:
-
-1. Clone este repositorio:
-```bash
-git clone https://github.com/Leonela27/data-analysis-portfolio.git
-cd data-analysis-portfolio
-```
-
-2. Cree y active un entorno virtual:
-
-```bash
-python3 -m venv venv
-
-# Linux/macOS
-source venv/bin/activate
-
-# Windows
-venv\Scripts\activate
-```
-
-3. Instale las dependencias requeridas:
-```bash
-pip install -r requirements.txt
-```
-
-## Ejecución 🚀
-
-### Proyectos de Python
-
-1. Navegue hasta el directorio del proyecto y ejecute el cuaderno Jupyter:
-```bash
-cd projects/python-projects/project1
-jupyter cuaderno
-```
-
-### Proyectos de PowerBI
-
-Para explorar e interactuar con los proyectos de Power BI:
-
-1. Abra el archivo .pbix en Power BI Desktop.
-
-2. Explore el informe e interactúe con las visualizaciones. Puede segmentar y filtrar los datos directamente en Power BI Desktop para obtener información.
+- **Proyectos de Power BI**: estos proyectos se encuentran en el directorio [`powerbi-projects`](./projects/powerbi-projects/). Incluyen paneles interactivos e informes creados para brindar información valiosa. Para obtener más información, consulte el archivo [README](./projects/powerbi-projects/README.md) correspondiente.
