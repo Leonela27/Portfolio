@@ -10,7 +10,7 @@ Explore the projects to see how I've applied my data analysis skills in differen
 ## Table of Contents 📑
 
 - [About Me](#about-me-)
-- [Requirements](#requirements-)
+- [Requirements](#requirements-️)
 - [Projects](#projects-)
 
 
