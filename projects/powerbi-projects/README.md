@@ -1,7 +1,7 @@
 ## Table of Contents 📑
 
-- [Execution](#execution)
-- [Project Descriptions](#project-descriptions)
+- [Execution](#execution-)
+- [Project Descriptions](#project-descriptions-)
 
 
 ## Execution 🚀
